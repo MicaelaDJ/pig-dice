@@ -12,16 +12,14 @@ _(TO BE ADDED)_
 
 | Behavior | Input | Output |
 | - | :-: | :-: |
-| End player turn | End Turn | End Player Turn |
 | Roll six-sided dice | Roll Dice | Dice Number |
-| Restart game and clear dice rolls | Restart | No Dice Number |
 | Player rolls a 1, end turn | Roll=1 | End Player Turn |
 | Player two rolls a 1, end turn | Roll=1 | End Player Turn |
 | Player rolls any other number, add to turn total | Dice Roll | Add to Turn Total |
 | Player "holds" and ends turn, add turn total to score | Hold/End Turn | Add Turn Total to Score |
 | Player two can roll and obtain turn total and score | Dice Roll/Hold | Turn Total and Scoring |
 | Player score is 100 points or more, player wins | Score >= 100 | Player Wins |
-| Restart game now also clears score | Restart | No Turn Totals or Scores |
+| Restart game that clears scores and dice roll | Restart | No Turn Totals or Scores |
 
 ## Setup/Installation Requirements
 

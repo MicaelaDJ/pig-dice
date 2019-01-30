@@ -30,18 +30,24 @@ Player.rollDice = function(){
 };
 */
 
-Player.tempScore = 0;
-Player.totalScore = 0;
-
-function Player (tempScore, totalScore) {
-  this.tempScore = tempScore,
-  this.totalScore = totalScore;
+function Player() {
+  this.tempScore = 0,
+  this.totalScore = 0;
 };
+
+var playerOne = new Player();
+var playerTwo = new Player();
 
 Player.prototype.rollDice = function() {
-  let dice = Math.floor(Math.random() * 6) + 1;
-    $("#dice").text(dice);
+  this.dice = Math.floor(Math.random() * 6) + 1;
+  $("#rollArea").text(this.dice);
 };
+
+// Playerproptot.checkOne = function() {
+//   dice
+// }
+
+
 
 // ### User Interface ### ----- -----
 $(document).ready(function() {
@@ -49,8 +55,8 @@ $(document).ready(function() {
     event.preventDefault();
     $("#player1Roll").hide();
     $("#player2Roll").show();
-    $("#player1score").text(Player.totalScore++);
-    Player.prototype.rollDice();
+    playerOne.rollDice();
+    $("#player2score").text(playerOne.tempScore);
   }); // end button#player1Roll.click
   $("#player2Roll").click(function(event) {
     event.preventDefault();
