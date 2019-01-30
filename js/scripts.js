@@ -8,19 +8,18 @@
 // player win
 // restart game
 
-var player1 = "Player One"
-var player2 = "Player Two"
+var Player = (
+  currentRoll = 0
+  // tempScore
+  // totalScore
+  // isTurn
+);
 
-function Player() {
-  this.roll = roll,
-  this.hold = hold,
-  this.score = score,
-  this.turn = turn
-}
-
-Player.prototype.rollDice = function(roll){
-  return math.random(6)
-}
+Player.prototype.rollDice = function(currentRoll){
+  var currentRoll = 0;
+  alert("UHOH");
+  //return this.math.random(6)
+};
 
 function checkTurn(turn) {
   if ( turn === true) {
