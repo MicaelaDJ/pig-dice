@@ -1,34 +1,12 @@
 // ### Business Logic ### ----- -----
-// var player
+// var player DONE
 // constructor for turns
-// prototype for rolling
+// prototype for rolling DONE
 // prototype for holding
 // totaling score
 // changing turns
 // player win
 // restart game
-//this block of code sets up the points/
-/*
-function Player (totalPoints, roundPoints) {
-  this.totalPoints,
-  this.roundPoints
-}
-//this block of code sets variables
-var player1 = Player("player1");
-var player2 = Player("player2");
-
-function() {
-  // currentRoll: 0
-  // tempScore: 0,
-  // totalScore,
-  // isTurn
-};
-
-Player.rollDice = function(){
-  this.tempScore = alert("UHOH");
-  //return this.math.random(6)
-};
-*/
 
 function Player() {
   this.tempScore = 0,
@@ -41,11 +19,18 @@ var playerTwo = new Player();
 Player.prototype.rollDice = function() {
   this.dice = Math.floor(Math.random() * 6) + 1;
   $("#rollArea").text(this.dice);
+  if ( this.dice === 1 ) {
+    this.tempScore = 0;
+    return false;
+  } else if ( this.dice !== 1 ) {
+    this.tempScore += this.dice;
+    return this.tempScore;
+  } else {
+    return;
+  };
 };
 
-// Playerproptot.checkOne = function() {
-//   dice
-// }
+//Player.prototype.
 
 
 
@@ -53,16 +38,23 @@ Player.prototype.rollDice = function() {
 $(document).ready(function() {
   $("button#player1Roll").click(function(event) {
     event.preventDefault();
-    $("#player1Roll").hide();
-    $("#player2Roll").show();
-    playerOne.rollDice();
-    $("#player2score").text(playerOne.tempScore);
+    var result = playerOne.rollDice();
+    if ( result = false ) {
+      $("#player1Roll").hide();
+      $("#player2Roll").show();
+    } else {
+      $("#player1score").text(playerOne.tempScore);
+    }
   }); // end button#player1Roll.click
   $("#player2Roll").click(function(event) {
     event.preventDefault();
-    $("#player2Roll").hide();
-    $("#player1Roll").show();
-    $("#player2score").text(Player.totalScore++);
+    var result = playerOne.rollDice();
+    if ( result = false ) {
+      $("#player2Roll").hide();
+      $("#player1Roll").show();
+    } else {
+      $("#player2score").text(playerTwo.tempScore);
+    }
     Player.prototype.rollDice();
   }); // end button#player1Roll.click
 }); //end document.ready
