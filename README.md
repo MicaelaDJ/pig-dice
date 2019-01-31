@@ -6,7 +6,7 @@
 
 ## Description
 
-_(TO BE ADDED)_
+_Epicodus coursework, creation of a game of pig dice in which players take turn rolling a die and add their scores._
 
 ## Specifications
 
@@ -24,7 +24,7 @@ _(TO BE ADDED)_
 ## Setup/Installation Requirements
 
 * _A web browser is required to visit this website._
-* _These files can be cloned into a new folder at [https://github.com/micaela/pig-dice](https://github.com/micaela/pig-dice)_
+* _These files can be cloned into a new folder at [https://github.com/micaeladj/pig-dice](https://github.com/micaeladj/pig-dice)_
 * _From there the files will all be accessible from within the folder created for this project.
 
 ## Known bugs
