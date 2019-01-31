@@ -4,13 +4,16 @@
 #player2Roll, #player2Hold {
   display: none;
 }
+.dice {
+  display: none;
+}
 .jumbotron {
   background-color: #c27670;
   color: #ffffff;
   text-align: center;
   font-family: 'KoHo', sans-serif;
 }
-img#pig {
+#pig {
   width: 10%;
 }
 h3 {
@@ -22,7 +25,7 @@ p {
   font-size: 25px;
 }
 button {
-  font-family: 'KoHo', sans-serif; 
+  font-family: 'KoHo', sans-serif;
 }
 
 body {

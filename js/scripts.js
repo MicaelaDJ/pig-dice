@@ -20,7 +20,6 @@ var playerTwo = new Player();
 // playerX function to roll dice
 Player.prototype.rollDice = function() {
   this.dice = Math.floor(Math.random() * 6) + 1; // Perfect maths
-  $("#rollArea").text(this.dice);
   if ( this.dice === 1 ) { // if dice is 1
     return false; // return to playerX.rollDice result === false in UI
   } else if ( this.dice !== 1 ) {
@@ -31,14 +30,6 @@ Player.prototype.rollDice = function() {
     location.reload();
   };
 }; // end of rollDice
-
-// Player.prototype.winState = function() {
-//   if (totalScore === 20) {
-//     alert("You win");
-//   } else {
-//     alert("You suck");
-//   }
-// }; // end of win state
 
 // ### User Interface ### ----- -----
 $(document).ready(function() {
@@ -55,6 +46,9 @@ $(document).ready(function() {
     var result = playerOne.rollDice();
     if ( result === false ) { // if dice is 1
       // change player turn on roll 1
+      // $("img").show();
+      $(".dice").hide();
+      $("#orange1").show();
       $("#player1Roll").hide();
       $("#player2Roll").show();
       $("#player1Hold").hide();
@@ -88,6 +82,8 @@ $(document).ready(function() {
     var result = playerTwo.rollDice();
     if ( result === false ) { // if dice is 1
       // change player turn on roll 1
+      $(".dice").hide();
+      $("#purple1").show();
       $("#player2Roll").hide();
       $("#player1Roll").show();
       $("#player2Hold").hide();
