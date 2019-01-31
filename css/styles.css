@@ -1,6 +1,19 @@
 .col-md-4 {
   text-align: center;
 }
-#player2Roll {
+#player2Roll, #player2Hold {
   display: none;
+}
+.jumbotron {
+  background-color: #c27670;
+  color: #ffffff;
+  text-align: center;
+  font-family: 'KoHo', sans-serif;
+}
+img#pig {
+  width: 10%;
+}
+
+body {
+  background-color: #ffdcd9;
 }

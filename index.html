@@ -6,11 +6,13 @@
     <script src="js/scripts.js" type="text/JavaScript"></script>
     <link rel="stylesheet" href="css/bootstrap.css" type="text/css" media="all">
     <link rel="stylesheet" href="css/styles.css" type="text/css" media="all">
-    <title></title>
+    <link href="https://fonts.googleapis.com/css?family=KoHo" rel="stylesheet">
+    <title>Pig Dice</title>
   </head>
   <body>
     <div class="container-fluid">
       <div class="jumbotron">
+        <img id="pig" src="img/pig-icon.png" alt="an image of a pig face">
         <h1>Pig Dig Dice Game</h1>
         <h2>Hours of Squealing Fun</h2>
       </div>
@@ -18,22 +20,26 @@
     <div class="container">
       <div class="row">
         <div class="col-md-4">
-          <p>Score: <span id="player1score"></span></p>
           <h3>Player 1</h3>
+          <p>Score: <span id="player1score">0</span></p>
+          <p>TotalScore: <span id="player1total">0</span></p>
+
         </div>
         <div class="col-md-4">
           <div id="rollArea">
-            <img src="http://bestanimations.com/Games/Dice/rolling-dice-gif-7.gif" width="50%" alt="Animated dice image">
+            DICE GOES HERE
           </div>
           <br><br>
           <button type="button" name="Roll" id="player1Roll" class="btn btn-success">Roll</button>
           <button type="button" name="Roll" id="player2Roll" class="btn btn-info">Roll</button>
           <br><br>
-          <button type="button" name="Hold" class="btn btn-warning">Hold</button>
+          <button type="button" name="Hold" id="player1Hold" class="btn btn-warning">Hold</button>
+          <button type="button" name="Hold" id="player2Hold" class="btn btn-danger">Hold</button>
         </div>
         <div class="col-md-4">
-          <p>Score: <span id="player2score"></span></p>
           <h3>Player 2</h3>
+          <p>Score: <span id="player2score">0</span></p>
+          <p>TotalScore: <span id="player2total">0</span></p>
         </div>
       </div>
     </div>
